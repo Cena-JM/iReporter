@@ -7,13 +7,13 @@ from iReporter.forms import RegistrationForm, LoginForm, PostForm, UpdateAccount
 posts = [
     {
         'author': 'JabMN',
-        'title': 'Flag Post 1',
+        'title': 'Issue Title 1',
         'content': 'First post content',
         'date_posted': 'November 16 2018'
     },
     {
         'author': 'test_user',
-        'title': 'Flag Post 2',
+        'title': 'Issue Title 1',
         'content': 'Second post content',
         'date_posted': 'November 16 2018'
     }
@@ -45,7 +45,7 @@ def about():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
+        flash(f'Account created for {form.username.data}! ? (Not operational)', 'success')
         return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
 
@@ -54,17 +54,22 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         if form.email.data == 'user@ireporter.com' and form.password.data == 'password':
-            flash('You have been logged in!', 'success')
+            flash('This provision is not yet operational! ? (Logged in)', 'success')
             return redirect(url_for('account'))
         else:
-            flash('Login Unsuccessful. Please check username and password', 'danger')
+            flash('This provision is not yet operational! ? (Wrong username or password)', 'danger')
     return render_template('login.html', title='Login', form=form)
 
 @app.route("/account", methods=['GET', 'POST'])
 def account():
     form = UpdateAccountForm()
-    return render_template('account.html', title='Account',
-                           form=form)
+    if form.validate_on_submit():
+        flash(f'Account Update for {form.username.data}! ? (Not operational)', 'success')
+        return redirect(url_for('home'))
+    elif request.method == 'GET':
+        form.username.data = 'JabMN'
+        form.email.data = 'jabmn@ireport.com'
+        return render_template('account.html', title='Account', form=form)
 
 
 @app.route("/logout")
