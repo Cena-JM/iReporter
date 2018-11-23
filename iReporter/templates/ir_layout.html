@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if title %}
+        <title>iReporter - {{ title }}</title>
+    {% else %}
+        <title>iReporter</title>
+    {% endif %}
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav">
+                <a class="navbar-brand left" href="/">iReporter</a>
+                <a class="nav-item nav-link left" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link left" href="{{ url_for('about') }}">About</a>
+                <!-- Navbar Right Side -->
+                <a href="{{ url_for('account') }}"><img class="pf-image-nav" src="../static/profile_pictures/default-pf-small.jpg"></a>
+                <a class="nav-item nav-link" href="{{ url_for('account') }}"  style="margin:0;">JabNM</a>
+                <a class="nav-item nav-link" href="{{ url_for('report_issue') }}">New Post</a>
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-main">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col">
+                <div class="content-section center">
+                    <h3>Notifications</h3>
+                    <a href="{{ url_for('reported_issues') }}" class="notification-link"><img class="nl-image" src="../static/images/flag.png" alt="">Red flag issues (89)</a>
+                    <a href="{{ url_for('reported_issues') }}" class="notification-link"><img class="nl-image" src="../static/images/intervention.png" alt="">Intervation issues (193)</a>
+                    <a href="" class="notification-link"><img class="nl-image" src="../static/images/announcements.png" alt="">Announcements</a>
+                    <a href="" class="notification-link"><img class="nl-image" src="../static/images/event.png" alt="">Events</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        {% block content2 %}{% endblock %}
+    </div>
+    
+
+    <!-- JavaScript -->
+
+    </body>
+</html>
