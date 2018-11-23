@@ -270,9 +270,10 @@ profile-section {
     margin: 0 0 20px 0;
 }
 .form-radio {
-    text-decoration: none;
-    display: grid;
-    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
 }
 .button {
     padding: 6px 8px;
@@ -344,3 +345,19 @@ profile-section {
 .col-handled { color: rgb(0, 255, 106); }
 .col-pend { color: rgb(255, 137, 94); }
 .col-rjt { color: rgb(150, 34, 34); }
+.search-input {
+    width: 340px;
+    height: 28px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    background: rgba(255, 255, 255, .4);
+}
+.search-btn {
+    width: 34px; height: 30px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    background: rgba(255, 255, 255, .4);
+    position: relative; right: 5px;
+    margin: 0 130px 0 0;
+    vertical-align: middle;
+}
