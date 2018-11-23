@@ -42,10 +42,52 @@ h3 { font-size: 30px;
     border-bottom: 1px solid #dddddd;
 }
 h4 { font-size: 24px; font-weight: 100; line-height: 40px; margin: 0 0 0 0; }
-h5 { font: 18px/26px; }h6 { font: 18px/26px; }
+h5 { 
+    font-size: 24px; 
+    font-weight: 100; 
+    line-height: 40px; 
+    color: #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0 0 0 0; 
+}
+h6 { font: 18px/26px; }
 a {
     text-decoration: none;
+    color: #428bca;
 }
+
+/*----------------------Alert----------------------------*/
+
+#alert {
+    display: none;
+    background-color: #61768a;
+    color: #fafafa;
+    position: fixed;
+    width: 320px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 100;
+ }
+ #alert button {
+    background-color: #48E5DA;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+ }
+ #alert .message {
+    text-align: left;
+ }
+
+/*-------------------------------------------------------*/
+
+
 fieldset {
     border: none;
     margin: 0 auto;
@@ -147,6 +189,8 @@ a.issue-title:hover {
     color: #d1d1d1;
     font: 16px/26px Arial, Helvetica, sans-serif;
     margin-left: 16px;
+    background: none;
+    border: none;
 }
 .nav-link:hover {
     color: #ffffff;

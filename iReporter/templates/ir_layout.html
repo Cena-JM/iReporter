@@ -15,6 +15,10 @@
     {% endif %}
 </head>
 <body>
+    <div id="alert">
+        <div class="message"><h5>Oops!</h5><p>This fuction is yet to be available!</p><p>For more informtion please contact us.</p></div>
+        <button class="yes">OK</button>
+    </div>
     <header class="header">
         <nav class="navbar">
             <div class="container nav">
@@ -27,7 +31,7 @@
                 <a href="{{ url_for('account') }}"><img class="pf-image-nav" src="../static/profile_pictures/default-pf-micro.png"></a>
                 <a class="nav-item nav-link" href="{{ url_for('account') }}"  style="margin:0;">JabNM</a>
                 <a class="nav-item nav-link" href="{{ url_for('report_issue') }}">New Post</a>
-                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
             </div>
         </nav>
     </header>
@@ -50,8 +54,8 @@
                     <h3>Notifications</h3>
                     <a href="{{ url_for('reported_issues') }}" class="notification-link"><img class="nl-image" src="../static/images/flag.png" alt="">Red flag issues (89)</a>
                     <a href="{{ url_for('reported_issues') }}" class="notification-link"><img class="nl-image" src="../static/images/intervention.png" alt="">Intervation issues (193)</a>
-                    <a href="" class="notification-link"><img class="nl-image" src="../static/images/announcements.png" alt="">Announcements</a>
-                    <a href="" class="notification-link"><img class="nl-image" src="../static/images/event.png" alt="">Events</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="../static/images/announcements.png" alt="">Announcements</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="../static/images/event.png" alt="">Events</a>
                 </div>
             </div>
         </div>
@@ -62,6 +66,7 @@
     
 
     <!-- JavaScript -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
     </body>
 </html>
