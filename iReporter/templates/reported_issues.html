@@ -11,7 +11,7 @@
                     </td>
                     <td class="body-section">
                         <div class="issue-metadata">
-                            <a class="issue-author" href="#">{{ post.author }}</a>
+                            <a class="issue-author" onclick="functionAlert();">{{ post.author }}</a>
                             <small class="text-muted">{{ post.date_posted }}</small>
                         </div>
                         <div class="update-buttons">
@@ -23,7 +23,7 @@
                                 <a onclick="functionAlert();"><img src="../static/images/flag.png"></a>
                             </span>
                         </div>
-                        <h2><a class="issue-title" href="#">{{ post.title }}</a></h2>
+                        <h2><a class="issue-title" onclick="functionAlert();">{{ post.title }}</a></h2>
                         <p class="issue-content">{{ post.content }}</p>
                     </td>
                 </tr>
