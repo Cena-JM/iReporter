@@ -55,6 +55,17 @@ a {
     text-decoration: none;
     color: #428bca;
 }
+input[type=text], input[type=password], input[type=email] {
+    padding-left: 8px;
+}
+
+
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
 
 /*----------------------Alert----------------------------*/
 
@@ -84,8 +95,40 @@ a {
  #alert .message {
     text-align: left;
  }
+/*---------------------------------------------*/
+/*-----------------Flashes--------------------------------*/
 
-/*-------------------------------------------------------*/
+.alert-success {
+    padding: 6px 12px;
+    color: #003b6e;
+    background: #92ccff;
+}
+.alert-error {
+    padding: 6px 12px;
+    color: #6e0009;
+    background: #ff73a2;
+}
+.alert-danger {
+    padding: 6px 12px;
+    color: #6e0009;
+    background: #ff73a2;
+}
+.invalid-feedback {
+    color: #df0013;
+}
+
+.form-input {
+    width: 100%; height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    padding: 6px 0;
+}
+.form-input-error {
+    border: 1px solid #df0013;
+    margin: 0 0 0 0;
+}
+/*---------------------------------------------------------*/
 
 
 fieldset {
@@ -202,9 +245,6 @@ a.issue-title:hover {
 .row {
     margin-top: 100px;
 }
-.right {
-    float: right;
-}
 .navbar-brand {
     font: 20px/26px Arial, Helvetica, sans-serif;
     color: #f2f2f2;
@@ -212,9 +252,6 @@ a.issue-title:hover {
 }
 .navbar-brand:hover {
     color: #ffffff;
-}
-.left {
-    float: left;
 }
 .in-title {
     position: relative;
@@ -263,10 +300,6 @@ img {
     display: table-cell;
     vertical-align: middle;
 }
-profile-section {
-    width: 70px; height: 70px;
-    text-align: center;
-}
 .profile-pix {
     border: 1px solid #dddddd;
     border-radius: 50%;
@@ -280,6 +313,7 @@ profile-section {
     width: 125px; height: 125px;
     display: table-cell;
     vertical-align: middle;
+    margin: 0 20px 0 0;
 }
 .home-image {
     width: 360px; height: 360px;
@@ -297,13 +331,6 @@ profile-section {
 
 }
 /*-------------------------*/
-.form-input {
-    width: 100%; height: 40px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin: 0 0 20px 0;
-    padding: 6px 0;
-}
 .form-label {
     height: 20px;
 }
@@ -363,16 +390,9 @@ profile-section {
 .update-buttons {
     width: 100%; height: 40px;
 }
-.f-left {
-    float: left;
-}
-.f-right {
-    float: right;
-}
 .status-table { margin-bottom: 30px; }
 .status td, th {
-    width: 140px; height: 45px;
-    text-align: left;
+    height: 45px;
 }
 .status-name {
     color: #428bca;
@@ -382,10 +402,12 @@ profile-section {
 }
 .colomn1 {
     width: 160px;
+    text-align: left;
 }
-.col-handled { color: rgb(0, 255, 106); }
-.col-pend { color: rgb(255, 137, 94); }
-.col-rjt { color: rgb(150, 34, 34); }
+.col-handled { color: rgb(0, 221, 48); }
+.col-pend { color: #0064bb; }
+.col-rjt { color: rgb(255, 0, 0); }
+.col-b { width: 90px; text-align: center;}
 .search-input {
     width: 340px;
     height: 28px;
@@ -398,7 +420,7 @@ profile-section {
     border: none;
     border-radius: 0 3px 3px 0;
     background: rgba(255, 255, 255, .4);
-    position: relative; right: 5px;
+    position: relative; right: 4px;
     margin: 0 130px 0 0;
     vertical-align: middle;
 }
