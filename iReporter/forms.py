@@ -36,6 +36,7 @@ class PostForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
     issue_type = RadioField('Issue Type', choices=[('value','Red Flag'),('value_two','Intervation')], validators=[DataRequired()])
+    location = BooleanField('Find my location')
     media = FileField('Upload an image or a video', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Submit')
 

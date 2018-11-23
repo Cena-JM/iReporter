@@ -80,7 +80,7 @@ def logout():
 def issue():
     return render_template('issue.html')
 
-@app.route("/post/new", methods=['GET', 'POST'])
+@app.route("/issue/new", methods=['GET', 'POST'])
 def report_issue():
     form = PostForm()
     if form.validate_on_submit():
