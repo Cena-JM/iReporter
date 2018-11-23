@@ -1,0 +1,53 @@
+{% extends "ir_layout.html" %}
+{% block content %}
+<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <h2>Report Issue</h2>
+                <div class="form-wrap">
+                    {{ form.title.label(class="form-label") }}
+                    {% if form.title.errors %}
+                        {{ form.title(class="form-input") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class="form-input") }}
+                    {% endif %}
+                </div>
+                <div class="form-wrap">
+                    {{ form.content.label(class="form-label") }}
+                    {% if form.content.errors %}
+                        {{ form.content(class="form-textArea") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.content.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.content(class="form-textArea") }}
+                    {% endif %}
+                </div>
+                <div class="form-wrap">
+                    {{ form.issue_type.label(class="form-label") }}
+                    {{ form.issue_type(class="form-radio") }}
+                </div>
+                <div class="form-wrap">
+                    {{ form.media.label() }}
+                    {{ form.media(class="form-control-file") }}
+                    {% if form.media.errors %}
+                        {% for error in form.media.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div><br>
+            </fieldset>
+            <div class="form-wrap">
+                {{ form.submit(class="out-line-btn") }}
+            </div>
+        </form>
+</div>
+{% endblock content %}
