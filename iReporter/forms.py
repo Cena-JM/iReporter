@@ -38,4 +38,3 @@ class PostForm(FlaskForm):
     issue_type = RadioField('Issue Type', choices=[('value','Red Flag'),('value_two','Intervation')], validators=[DataRequired()])
     media = FileField('Upload an image or a video', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Submit')
-

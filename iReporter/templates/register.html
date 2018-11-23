@@ -8,7 +8,7 @@
                 <div class="form-wrap">
                     {{ form.username.label(class="form-label") }}
                     {% if form.username.errors %}
-                        {{ form.username(class="form-input") }}
+                        {{ form.username(class="form-input form-input-error") }}
                         <div class="invalid-feedback">
                             {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
@@ -21,7 +21,7 @@
                 <div class="form-wrap">
                     {{ form.email.label(class="form-label") }}
                     {% if form.email.errors %}
-                        {{ form.email(class="form-input") }}
+                        {{ form.email(class="form-input form-input-error") }}
                         <div class="invalid-feedback">
                             {% for error in form.email.errors %}
                                 <span>{{ error }}</span>
@@ -34,7 +34,7 @@
                 <div class="form-wrap">
                     {{ form.password.label(class="form-label") }}
                     {% if form.password.errors %}
-                        {{ form.password(class="form-input") }}
+                        {{ form.password(class="form-input form-input-error") }}
                         <div class="invalid-feedback">
                             {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
@@ -47,7 +47,7 @@
                 <div class="form-wrap">
                     {{ form.confirm_password.label(class="form-label") }}
                     {% if form.confirm_password.errors %}
-                        {{ form.confirm_password(class="form-input") }}
+                        {{ form.confirm_password(class="form-input form-input-error") }}
                         <div class="invalid-feedback">
                             {% for error in form.confirm_password.errors %}
                                 <span>{{ error }}</span>
@@ -63,9 +63,9 @@
             </div>
         </form>
     </div>
-    <div class="border-top pt-3">
+    <div class="">
         <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign Up Now</a>
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign Up Now</a>
         </small>
     </div>
 {% endblock content %}
