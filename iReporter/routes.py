@@ -7,13 +7,13 @@ from iReporter.forms import RegistrationForm, LoginForm, PostForm, UpdateAccount
 posts = [
     {
         'author': 'JabMN',
-        'title': 'Flag Post 1',
+        'title': 'Issue Title 1',
         'content': 'First post content',
         'date_posted': 'November 16 2018'
     },
     {
         'author': 'test_user',
-        'title': 'Flag Post 2',
+        'title': 'Issue Title 1',
         'content': 'Second post content',
         'date_posted': 'November 16 2018'
     }
