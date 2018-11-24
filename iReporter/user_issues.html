@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iReporter-user_issues</title>
+</head>
+<body>
+    <div id="alert">
+        <div class="message"><h5>Oops!</h5><p>This fuction is yet to be available!</p><p>For more informtion please contact us.</p></div>
+        <button class="yes">OK</button>
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav">
+                <a class="navbar-brand" href="/">iReporter</a>
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
+                <input type="text" class="search-input" placeholder="search">
+                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <!-- Navbar Right Side -->
+                <a href="account.html"><img class="pf-image-nav" src="images/profile_pictures/default-pf-micro.png"></a>
+                <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
+                <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
+                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-main">
+                <article class="content-section">
+                    <table>
+                        <tr>
+                            <td class="profile-section">
+                                <div class="center-image">
+                                    <img class="profile-pix pf-small" src="images/profile_pictures/default-pf-small.png">
+                                </div>
+                            </td>
+                            <td class="body-section">
+                                <div class="issue-metadata">
+                                    <a class="issue-author" href="account.html">JabMN</a>
+                                    <small class="text-muted">November 16 2018</small>
+                                </div>
+                                <div class="update-buttons">
+                                    <span class="f-left">
+                                        <button class="button filled-btn update-btn" onclick="functionAlert();">Update</button>
+                                        <button class="button filled-btn delete-btn" onclick="functionAlert();">delete</button>
+                                    </span>
+                                    <span class="f-right">
+                                        <a onclick="functionAlert();"><img src="images/img/flag.png"></a>
+                                    </span>
+                                </div>
+                                <h2><a class="issue-title" onclick="functionAlert();">My First Reported Issue</a></h2>
+                                <p class="issue-content">This is my first reported issue content!</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </div>
+            <div class="col">
+                <div class="content-section center">
+                    <h3>Notifications</h3>
+                    <a href="reported_issues.html" class="notification-link"><img class="nl-image" src="images/img/flag.png" alt="">Red flag issues (89)</a>
+                    <a href="reported_issues.html" class="notification-link"><img class="nl-image" src="images/img/intervention.png" alt="">Intervation issues (193)</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="images/img/announcements.png" alt="">Announcements</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="images/img/event.png" alt="">Events</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

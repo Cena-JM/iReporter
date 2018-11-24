@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iReporter-login</title>
+</head>
+<body>
+    <div id="alert">
+        <div class="message"><h5>Oops!</h5><p>This fuction is yet to be available!</p><p>For more informtion please contact us.</p></div>
+        <button class="yes">OK</button>
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav">
+                <a class="navbar-brand" href="/">iReporter</a>
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
+                <input type="text" class="search-input" placeholder="search">
+                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <!-- Navbar Right Side -->
+                <a href="account.html"><img class="pf-image-nav" src="images/profile_pictures/default-pf-micro.png"></a>
+                <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
+                <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
+                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-main">
+                <div class="content-section">
+                    <form method="POST" action="">
+                        <fieldset class="form-group">
+                            <h2>Log In</h2>
+                            <div class="form-wrap">
+                                <label class="form-label">Email</label>
+                                <input class="form-input" type="email">
+                            </div>
+                            <div class="form-wrap">
+                                <label class="form-label">Password</label>
+                                <input class="form-input" type="password">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox">
+                                <small>Remember me</small>
+                            </div><br>
+                        </fieldset>
+                        <div class="form-wrap">
+                            <a class="out-line-btn" onclick="functionAlert();">Login</a>
+                            <small class="text-muted">
+                                <a onclick="functionAlert();">Forgot Password?</a>
+                            </small>
+                        </div>
+                    </form>
+                </div>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Need An Account? <a class="ml-2" href="register.html">Sign Up Now</a>
+                    </small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-section center">
+                    <h3>Notifications</h3>
+                    <a href="reported_issues.html" class="notification-link"><img class="nl-image" src="images/img/flag.png" alt="">Red flag issues (89)</a>
+                    <a href="reported_issues.html" class="notification-link"><img class="nl-image" src="images/img/intervention.png" alt="">Intervation issues (193)</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="images/img/announcements.png" alt="">Announcements</a>
+                    <a class="notification-link" onclick="functionAlert();"><img class="nl-image" src="images/img/event.png" alt="">Events</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
