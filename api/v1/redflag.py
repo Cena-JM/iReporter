@@ -36,7 +36,7 @@ redflag_records = [
 
 
 class Redflag(Resource):
-    
+
     def post(self, redflag):
         parser = reqparse.RequestParser()
         parser.add_argument("author")
