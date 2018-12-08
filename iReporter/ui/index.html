@@ -21,13 +21,13 @@
                 <a class="navbar-brand" href="">iReporter</a>
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
-                <input type="text" class="search-input" placeholder="search">
-                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <span class="search">
+                    <input type="text" class="search-input" placeholder="search">
+                    <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
-                <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
-                <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="login.html" style="margin-left: 230px">Report Issue</a>
+                <a class="nav-item nav-link" href="login.html">Login</a>
             </div>
         </nav>
     </header>
@@ -47,13 +47,8 @@
                     </p>
                     <p>
                         <a class="link-tab" href="about.html">Know More</a>
-                        <a class="link-tab report-tab" href="report_issue.html">Report Issue</a>
+                        <a class="link-tab report-tab" href="login.html">Report Issue</a>
                     </p>
-                </div>
-                <div class="image-section">
-                    <div class="center-image">
-                        <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
-                    </div>
                 </div>
             </div>
             <div class="col content-section">
@@ -65,6 +60,13 @@
             </div>
         </div>
     </main>
+    <div class="image-section">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
     
 
     <!-- JavaScript -->
