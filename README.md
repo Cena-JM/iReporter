@@ -6,3 +6,5 @@ user password -     password
 
 admin login -       admin@ireporter.com
 admin password -    password
+
+https://cena-jm.github.io/iReporter/iReporter/ui/
