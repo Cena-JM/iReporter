@@ -1,3 +1,4 @@
+document.getElementById("trash").style.display = "none"
 function functionAlert(msg, myYes) {
     var confirmBox = $("#alert");
     confirmBox.find(".message").text(msg);
@@ -9,6 +10,17 @@ function functionAlert(msg, myYes) {
  }
 function deleteAlert() {
    alert("Are you sure you want this entry deleted?");
+}
+function deleteRecord(bin) {
+   var chboxs = document.getElementsByName("dlt");
+   var vis = "none";
+   for(var i=0;i<chboxs.length;i++) {
+      if(chboxs[i].checked){
+         vis = "block";
+         break;
+      }
+   }
+   document.getElementById(bin).style.display = vis;
 }
 
 function validateForm() {

@@ -8,7 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>iReporter-issue</title>
+    <title>iReporter-user_issues</title>
 </head>
 <body>
     <div id="alert">
@@ -26,47 +26,44 @@
                     <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
                 </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
+                <a href="account.html" style="margin-left: 128px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
                 <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
                 <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="index.html">Logout</a>
             </div>
         </nav>
     </header>
     <main role="main" class="container">
         <div class="row">
             <div class="col-main">
-                <article class="media content-section">
-                    <img class="rounded-circle article-img" src="#">
-                    <div class="media-body">
-                        <div class="article-metadata">
-                        <a class="mr-2" href="#">None</a>
-                        <small class="text-muted">None</small>
-                        
-                        </div>
-                        <h2 class="article-title">None</h2>
-                        <p class="article-content">None</p>
-                    </div>
+                <article class="content-section">
+                    <table>
+                        <tr>
+                            <td class="profile-section">
+                                <div class="center-image">
+                                    <img class="profile-pix pf-small" src="images/profile_pictures/default-pf-small.png">
+                                </div>
+                            </td>
+                            <td class="body-section">
+                                <div class="issue-metadata">
+                                    <a class="issue-author" href="account.html">JabMN</a>
+                                    <small class="text-muted">November 16 2018</small>
+                                </div>
+                                <div class="update-buttons">
+                                    <span class="f-left">
+                                        <button class="button filled-btn update-btn" onclick="functionAlert();">Update</button>
+                                        <button class="button filled-btn delete-btn" onclick="functionAlert();">delete</button>
+                                    </span>
+                                    <span class="f-right">
+                                        <a onclick="functionAlert();"><img src="images/img/flag.png"></a>
+                                    </span>
+                                </div>
+                                <h2><a class="issue-title" onclick="functionAlert();">My First Reported Issue</a></h2>
+                                <p class="issue-content">This is my first reported issue content!</p>
+                            </td>
+                        </tr>
+                    </table>
                 </article>
-                <!-- Modal -->
-                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
-                                    <input class="btn btn-danger" type="submit" value="Delete">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="col">
                 <div class="col content-section">
@@ -79,7 +76,13 @@
             </div>
         </div>
     </main>
-    <div class="container">
+
+    <div class="image-section">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
     </div>
     
 

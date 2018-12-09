@@ -163,6 +163,12 @@ fieldset {
     border-radius: 3px;
     margin-bottom: 20px;
 }
+.admin-section table {
+    border-collapse: collapse;
+}
+.admin-section tr {
+    border-bottom: 1px solid #999999;
+}
 .ad-view {
     width: 100%;
 }
