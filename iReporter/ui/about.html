@@ -18,23 +18,31 @@
     <header class="header">
         <nav class="navbar">
             <div class="container nav">
-                <a class="navbar-brand" href="/">iReporter</a>
+                <a class="navbar-brand" href="">iReporter</a>
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
-                <input type="text" class="search-input" placeholder="search">
-                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <span class="search">
+                    <input type="text" class="search-input" placeholder="search">
+                    <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
-                <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
-                <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="login.html" style="margin-left: 230px">Report Issue</a>
+                <a class="nav-item nav-link" href="login.html">Login</a>
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container"  style="min-height:350px;">
         <div class="row">
             <div class="col-main">
                 <h1>About Page</h1>
+                <h4>Corruption is a huge bane to Africa’s development.</h4> 
+                    <p>
+                        Countries
+                         must develop novel and localised solutions that will curb this menace, 
+                         hence the birth of iReporter. iReporter enables any/every citizen to bring any 
+                         form of corruption to the notice of appropriate authorities and the general 
+                         public. Users can also report on things that needs government intervention
+                    </p>
             </div>
             <div class="col">
                 <div class="col content-section">
@@ -47,6 +55,14 @@
             </div>
         </div>
     </main>
+
+    <div class="image-section" style="position:relative; bottom:-90px;">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

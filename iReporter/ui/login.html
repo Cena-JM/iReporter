@@ -18,33 +18,33 @@
     <header class="header">
         <nav class="navbar">
             <div class="container nav">
-                <a class="navbar-brand" href="/">iReporter</a>
+                <a class="navbar-brand" href="">iReporter</a>
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
-                <input type="text" class="search-input" placeholder="search">
-                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <span class="search">
+                    <input type="text" class="search-input" placeholder="search">
+                    <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
-                <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
-                <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="report_issue.html" style="margin-left: 230px">Report Issue</a>
+                <a class="nav-item nav-link" href="">Login</a>
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container" style="min-height:370px;">
         <div class="row">
             <div class="col-main">
                 <div class="content-section">
-                    <form method="POST" action="">
+                    <form name="loginform" onSubmit="return validateForm();" method="post">
                         <fieldset class="form-group">
                             <h2>Log In</h2>
                             <div class="form-wrap">
                                 <label class="form-label">Email</label>
-                                <input class="form-input" type="email">
+                                <input class="form-input" type="email" name="email">
                             </div>
                             <div class="form-wrap">
                                 <label class="form-label">Password</label>
-                                <input class="form-input" type="password">
+                                <input class="form-input" type="password" name="password">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox">
@@ -52,7 +52,7 @@
                             </div><br>
                         </fieldset>
                         <div class="form-wrap">
-                            <a class="out-line-btn" onclick="functionAlert();">Login</a>
+                            <input class="out-line-btn" type="submit" value="Login">
                             <small class="text-muted">
                                 <a onclick="functionAlert();">Forgot Password?</a>
                             </small>
@@ -76,6 +76,14 @@
             </div>
         </div>
     </main>
+
+    <div class="image-section">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
     
 
     <!-- JavaScript -->

@@ -21,26 +21,55 @@
                 <a class="navbar-brand" href="">iReporter</a>
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
-                <input type="text" class="search-input" placeholder="search">
-                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <span class="search">
+                    <input type="text" class="search-input" placeholder="search">
+                    <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
-                <a class="nav-item nav-link" href="account.html"  style="margin:0;">Admin</a>
+                <a href="" style="margin-left: 128px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
+                <a class="nav-item nav-link" href=""  style="margin:0;">Admin</a>
                 <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="index.html">Logout</a>
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container"  style="min-height:320px;">
         <div class="row">
-            <div class="col-main">
+            <div class="col-main col-admin">
                 <div class="admin-section">
                     <table class="ad-view">
                         <tr>
-                            <th class="ad-head">Users</th><th class="ad-head">Emails</th><th class="ad-head">Issue</th><th class="ad-head">Type of issue</th><th class="ad-head">Status</th>
+                            <th class="ad-head"><a id="trash" onclick="functionAlert();"><img src="images/img/delete.png" alt=""></a></th><th class="ad-head">Users</th><th class="ad-head">Emails</th><th class="ad-head">Issue</th><th class="ad-head">Type of issue</th><th class="ad-head">Status</th>
                         </tr>
                         <tr>
-                            <td class="ad-entry"><span class="delete" onclick="deleteAlert();">x</span> JabNM</td><td class="ad-entry">jabmn@demo.com</td><td class="ad-entry">My First Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Handled"></td>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">JabNM</td><td class="ad-entry">jabmn@ireporter.com</td><td class="ad-entry">My First Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Handled"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
+                        </tr>
+                        <tr>
+                            <td class="ad-entry"><input type="checkbox" name="dlt" onclick="deleteRecord('trash');"></td><td class="ad-entry">TestUser</td><td class="ad-entry">testuser@ireporter.com</td><td class="ad-entry">My Test Reported Issue</td><td class="ad-entry"><input class="ad-input" type="text" value="Red Flag"></td><td class="ad-entry"><input class="ad-input" type="text" value="Pending"></td>
                         </tr>
                     </table>
                 </div>
@@ -54,6 +83,14 @@
             </div>
         </div>
     </main>
+
+    <div class="image-section">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
     
 
     <!-- JavaScript -->

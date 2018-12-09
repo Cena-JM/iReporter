@@ -18,20 +18,22 @@
     <header class="header">
         <nav class="navbar">
             <div class="container nav">
-                <a class="navbar-brand" href="/">iReporter</a>
+                <a class="navbar-brand" href="">iReporter</a>
                 <a class="nav-item nav-link" href="index.html">Home</a>
                 <a class="nav-item nav-link" href="about.html" style="margin-right: 90px;">About</a>
-                <input type="text" class="search-input" placeholder="search">
-                <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                <span class="search">
+                    <input type="text" class="search-input" placeholder="search">
+                    <button class="search-btn" onclick="functionAlert();"><img src="images/img/search.png"></button>
+                </span>
                 <!-- Navbar Right Side -->
-                <a href="account.html" style="margin-left: 110px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
+                <a href="account.html" style="margin-left: 128px"><img class="pf-image-nav img-small" src="images/profile_pictures/default-pf-micro.png"></a>
                 <a class="nav-item nav-link" href="account.html"  style="margin:0;">JabNM</a>
                 <a class="nav-item nav-link" href="report_issue.html">Report Issue</a>
-                <input class="nav-item nav-link" type="button" value="Logout" onclick="functionAlert();" />
+                <a class="nav-item nav-link" href="index.html">Logout</a>
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container"  style="min-height:900px;">
         <div class="row">
             <div class="col-main">
                 <div class="content-section">
@@ -44,14 +46,14 @@
                                     </td>
                                     <td>
                                         <h2 class="account-heading">JabMN</h2>
-                                        <p>jabmn@demo.com</p>
+                                        <p>jabmn@ireporter.com</p>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="media-body">
                             <span class="in-title"><span class="high-light">7</span> Records</span>
-                            <span class="status">
+                            <div class="status">
                                 <table class="status-table">
                                     <tr>
                                         <th class="colomn1">Records</th><th class="col-b">Handled</th><th class="col-b">Pending</th><th class="col-b">Rejected</th>
@@ -63,7 +65,7 @@
                                         <td class="status-name colomn1"><img src="images/img/intervention.png"> Intervations:</td><td class="col-handled col-b">0</td><td class="col-pend col-b">2</td><td class="col-rjt col-b">1</td>
                                     </tr>
                                 </table>
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,17 +74,17 @@
                         <h4>Account Info</h4>
                         <div class="form-wrap">
                             <label class="form-label">Name</label>
-                            <input class="form-input" type="text">
+                            <input class="form-input" type="text" value="JabMN">
                         </div>
                         <div class="form-wrap">
                             <label class="form-label">Email</label>
-                            <input class="form-input" type="email">
+                            <input class="form-input" type="email" value="jabmn@ireporter.com">
                         </div>
                         <div class="form-wrap">
                             <label class="form-label">Update profile picture</label>
                             <input type="file" name="pic" accept="image/*">
                         </div>
-                    </fieldset>
+                    </fieldset><br>
                     <div class="form-wrap">
                         <button class="out-line-btn">Update</button>
                     </div>
@@ -127,6 +129,13 @@
             </div>
         </div>
     </main>
+    <div class="image-section">
+        <div class="img-home">
+            <img class="home-image" src="images/img/ireporter-CA.png" alt="CA">
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
     
 
     <!-- JavaScript -->
